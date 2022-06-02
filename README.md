@@ -1,6 +1,11 @@
-# CS-180-Project-5
+# Quiz Learning Management System
 
-For Project 5, our team built off our work in Project 4, and resolved two missing implementations from Project 4: **allowing a student to view their scores by question, and giving teachers the option to view and edit student scores by question**. To compile and run our system, please download all of the methods that were uploaded to vocareum in the Project 5 section. In order to run our main program, please run the server name LMSQuizServer, and then, in a new terminal, run LMSQuizClient. [NOTE: Some of the GUI screens during the program may not display all components due to varying System parameters. Please resize windows to ensure all panels and textfields are showing]
+Just a small project a few of us worked on towards the end of the semester. Simple multithreaded and concurrent program that uses GUIs to interact with the user. User's can create an account and add Courses and Quizzes as a teacher. Or they can take quizzes and view their scores as a student. Program creates a local server for the client to connect with.
+
+To compile and run the program, download all of the following files. To run the main program:
+      - First, run the server named LMSQuizServer.
+      - Then, in a new terminal, run LMSQuizClient. 
+      [NOTE: Some of the GUI screens during the program may not display all components due to varying System parameters. Please resize windows to ensure all panels and textfields are showing]
 
 ## Method List and Description
 
@@ -566,11 +571,4 @@ This method allows a teacher to change the scores of a specified student who has
 
 ## Program Description
 
-The LMSQuizClient begins by first creating a connection with LMSQuizServer before displaying the loginGUI. Once the user successfully logs in, depending on their user type they are greeted with varying frames. Since this program is no longer sequentially run, multiple users can connect to the server, which uses a while loop and ArrayList of LMSQuizServer objects to continuously accept new connections. Since all file reading and writing is concurrent, information is continuously being updated whenever a user switches to a new frame. This removes the need for a refresh button.
-
-
-## Submission Role amongst our Team:
-
-Archit Sahu wrote this readMe.
-Sergio Alvarez wrote the Project Report.
-Jakob Wachter wrote the Tests.
+The LMSQuizClient begins by first creating a connection with LMSQuizServer before displaying the loginGUI. Once the user successfully logs in, depending on their user type they are greeted with varying frames. Since this program is not sequential, multiple local users can connect to the server, which uses a while loop and ArrayList of LMSQuizServer objects to continuously accept new connections. Since all file reading and writing is concurrent, information is continuously being updated whenever a user switches to a new frame. This removes the need for a refresh button.
